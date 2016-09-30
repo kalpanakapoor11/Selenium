@@ -1,0 +1,46 @@
+package rough;
+
+import org.testng.annotations.Test;
+
+import excelReader.Xlsreader;
+
+import org.testng.annotations.DataProvider;
+
+@Test
+public class parameterization {
+	
+	public static Xlsreader excel=null;
+	
+	public void testdata(String username,String password){
+		
+		System.out.println(username+"_______" +password);
+		
+	}
+	
+	@DataProvider
+	
+	public static Object[][] getData(){
+		
+		
+		if(excel==null){
+			excel= new Xlsreader("C:\\Users\\User1\\Desktop\\Credentials.xlsx");
+				
+			}
+		
+		String sheetName="LoginTest";
+		int row=excel.getRowCount(sheetName);
+		int cols=excel.getColumnCount(sheetName);
+		
+		System.out.println("Total rows are:"+row);
+		System.out.println("Total cols are:"+row);
+		Object[][] data=new Object[2][2];
+		
+		data[0][0]="kukku";
+		data[0][1]="dfksdfj";
+		data[1][0]="yogu";
+		data[1][1]="dfsf";
+		return data;
+		
+	}
+
+}

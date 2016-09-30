@@ -1,0 +1,14 @@
+package rough;
+
+public class testproperties {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Properties OR=new Properties();
+		
+		FileInputStream fis=new FileInputSteam();
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package Classes;
+
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TestTabsPopUps {
+
+	public static void main(String[] args) {
+		System.setProperty("driver.browser.chromedriver", "chromedriver.exe");
+		//ProfilesIni listprofile=new ProfilesIni();
+		//FirefoxProfile profile= listprofile.getProfile("default");
+		WebDriver driver=new ChromeDriver(/*profile*/);
+		driver.navigate().to(("http://www.firstcry.com/"));
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(5L, TimeUnit.SECONDS);
+		Set<String> winids=driver.getWindowHandles();
+		
+	}
+
+}

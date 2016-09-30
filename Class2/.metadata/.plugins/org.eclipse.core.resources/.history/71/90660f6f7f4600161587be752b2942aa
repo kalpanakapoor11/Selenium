@@ -1,0 +1,35 @@
+package com.virgin.bo.common;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Login {
+	
+	@Test
+	
+	public void login(){
+		//System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+				WebDriver driver=new FirefoxDriver();
+				driver.get(url);
+				System.out.println(driver.getCurrentUrl()); 
+				System.out.println(driver.getTitle());
+				WebDriverWait wait = new WebDriverWait(driver, 4000);
+				WebElement Uname = wait.until(ExpectedConditions.visibilityOfElementLocated((By.name("username"))));
+				Uname.sendKeys("adminred12@backoffice.com");
+				WebElement Psw = wait.until(ExpectedConditions.visibilityOfElementLocated((By.name("password"))));
+				Psw.sendKeys("testing");
+				//driver.findElement(By.partialLinkText("Forgot Password?")).click();
+				WebElement Login = wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("html/body/div[1]/div/div[2]/div/form/button"))));
+				while 
+				Login.click();
+				System.out.println(driver.getTitle());
+				System.out.println("Login Successfull");
+				
+	}
+
+}

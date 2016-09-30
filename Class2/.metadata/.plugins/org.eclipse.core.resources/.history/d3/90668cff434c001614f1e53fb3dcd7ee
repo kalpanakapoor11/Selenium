@@ -1,0 +1,32 @@
+package base;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+
+import com.sun.istack.internal.logging.Logger;
+
+import utility.ExcelReader;
+
+public class TestBase {
+	public static WebDriver driver;
+	public static Properties OR= new Properties();
+	public static Properties config=new Properties();
+	public static FileInputStream fis;
+	public static Logger log=Logger.getLogger("devPinoyLogger");
+	public static ExcelReader excel=new ExcelReader(System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\Credentials.xlsx");
+	
+	@BeforeSuite()
+	public void setup(){
+		
+	}
+	
+	@AfterSuite()
+	public void teardown(){
+		
+	}
+
+}

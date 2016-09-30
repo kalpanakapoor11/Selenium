@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TestWebApp.java&apos; to &apos;MobileAutomation/src/test/java/testcases&apos;&#x0D;&#x0A;- Original project: &apos;AppiumTesting&apos;&#x0D;&#x0A;- Destination element: &apos;MobileAutomation/src/test/java/testcases&apos;&#x0D;&#x0A;- Original element: &apos;TestWebApp.java&apos;" description="Copy compilation unit" destination="=MobileAutomation/src\/test\/java&lt;testcases" element1="/src&lt;{TestWebApp.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1474122018723" units="1" version="1.0"/>
+</session>

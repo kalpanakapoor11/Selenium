@@ -1,0 +1,45 @@
+package testcases;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import base.TestBase;
+
+public class UploadImageTest extends TestBase{
+	
+	@Test(dataProvider="getData")
+	public void UploadImage(String username,String password){
+		
+		log.debug(driver.getTitle());
+		
+		log.debug("Inside Upload photo");
+		log.debug("Inside Upload photo successfully");
+	}
+	
+	
+@DataProvider
+	
+	public static Object[][] getData(){
+		
+		String sheetName="UploadImageTest";
+		int row=excel.getRowCount(sheetName);
+		int cols=excel.getColumnCount(sheetName);
+		Object[][] data=new Object[row-1][cols];
+		
+		for(int rownum=2;rownum<=row;rownum++){
+			for(int colnum=0;colnum<cols;colnum++){
+				data[rownum-2][colnum]=excel.getCellData(sheetName, colnum, rownum);
+			}
+		}
+		//System.out.println("Total rows are:"+row);
+		//System.out.println("Total cols are:"+cols);
+			
+		return data;
+		
+	}
+
+	
+	
+
+}

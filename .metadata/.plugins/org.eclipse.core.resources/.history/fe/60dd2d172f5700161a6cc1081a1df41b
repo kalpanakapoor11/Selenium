@@ -1,0 +1,28 @@
+package Classes;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.internal.ProfilesIni;
+
+public class TestFrames {
+
+	public static void main(String[] args) {
+		//System.setProperty("driver.browser.chromedriver", "chromedriver.exe");
+		ProfilesIni listprofile=new ProfilesIni();
+		//FirefoxProfile profile= listprofile.getProfile("default");
+		WebDriver driver=new FirefoxDriver(/*profile*/);
+		driver.navigate().to(("https://fistcry.com"));
+		driver.manage().window().maximize();
+		driver.switchTo().frame("iframe_Login");
+		//WebDriverWait wait=new WebDriverWait(driver,30L);
+		//WebElement menu=wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("li>[data-tracking-id='men']")));
+		driver.manage().timeouts().implicitlyWait(5L, TimeUnit.SECONDS);
+		driver.findElement(By.id("Email")).sendKeys("kalpana");
+
+	}
+
+}

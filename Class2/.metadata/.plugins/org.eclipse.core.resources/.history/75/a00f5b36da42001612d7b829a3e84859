@@ -1,0 +1,21 @@
+package Assignment;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class assignment2 {
+	public static void main(String[]args){
+	System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+	ChromeDriver driver=new ChromeDriver();
+	driver.navigate().to("https://gmail.com");
+	driver.manage().window().maximize();
+	WebElement user=driver.findElement(By.name("Email"));
+	user.sendKeys("anything");
+	WebElement Next=driver.findElement(By.name("signIn"));
+	Next.click();
+	System.out.println(driver.findElement(By.id("errormsg_0_Email")));
+	
+	}
+
+}

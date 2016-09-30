@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Annotation2.java&apos; to &apos;Framework1/src/testNg&apos;&#x0D;&#x0A;- Original project: &apos;Frm&apos;&#x0D;&#x0A;- Destination element: &apos;Framework1/src/testNg&apos;&#x0D;&#x0A;- Original element: &apos;Annotation2.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=Framework1/src&lt;testNg" element1="/src&lt;{Annotation2.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1467221493740" units="1" version="1.0"/>
+</session>

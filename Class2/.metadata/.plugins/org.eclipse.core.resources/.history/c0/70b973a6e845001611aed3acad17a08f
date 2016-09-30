@@ -1,0 +1,13 @@
+#This data will be used for login into the application
+#------------------------------------------------------
+
+
+#To enter email address
+EmailAddress=name=username
+
+#To enter password
+
+Password=name=password
+
+#To click on submit button
+submitButton=Xpath=/html/body/div[1]/div/div[2]/div/form/button

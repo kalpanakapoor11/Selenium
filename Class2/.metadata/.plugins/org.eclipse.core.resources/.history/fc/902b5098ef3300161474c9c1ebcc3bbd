@@ -1,0 +1,11 @@
+package webdrivertesting;
+import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class TestSample {
+	public static void main(String[]args)
+	{
+		ChromeDriver driver=new ChromeDriver();
+	}
+
+}

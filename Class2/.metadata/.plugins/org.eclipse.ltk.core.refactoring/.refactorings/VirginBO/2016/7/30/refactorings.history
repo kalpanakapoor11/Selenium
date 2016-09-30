@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;chromedriver.exe&apos; to &apos;DataDrivenFramework&apos;&#x0D;&#x0A;- Original project: &apos;VirginBO&apos;&#x0D;&#x0A;- Destination element: &apos;DataDrivenFramework&apos;&#x0D;&#x0A;- Original element: &apos;chromedriver.exe&apos;" description="Copy file" destination="=DataDrivenFramework" element1="chromedriver.exe" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1468777504970" units="0" version="1.0"/>
+</session>

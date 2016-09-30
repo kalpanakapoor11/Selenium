@@ -1,0 +1,33 @@
+package testcases;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import base.TestBase;
+import utility.testutil;
+
+public class UploadImageTest extends TestBase{
+	
+	@Test(dataProvider="getData")
+	public void UploadImage(String path){
+		
+		log.debug(driver.getTitle());
+		
+		log.debug("Inside Upload photo");
+		log.debug("Inside Upload photo successfully");
+	}
+	
+	
+@DataProvider
+	
+	public static Object[][] getData(){
+		
+	return testutil.getData("UploadImageTest");
+		
+	}
+
+	
+	
+
+}

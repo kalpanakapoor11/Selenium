@@ -1,0 +1,31 @@
+package com.virgin.bo.common;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
+
+public class Login {
+	
+	@Test
+	
+	public void login(){
+		//System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+				WebDriver driver=new FirefoxDriver();
+				driver.navigate().to("https://google.com");
+				System.out.println(driver.getCurrentUrl()); 
+				System.out.println(driver.getTitle());
+				/*WebDriverWait wait = new WebDriverWait(driver, 4000);
+				WebElement Uname = wait.until(ExpectedConditions.visibilityOfElementLocated((By.name("username"))));
+				Uname.sendKeys(EmailAddress);
+				WebElement Psw = wait.until(ExpectedConditions.visibilityOfElementLocated((By.name(password))));
+				Psw.sendKeys(Password);
+				//driver.findElement(By.partialLinkText("Forgot Password?")).click();
+				WebElement Login = wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("html/body/div[1]/div/div[2]/div/form/button"))));
+				//while 
+				Login.click();*/
+				System.out.println(driver.getTitle());
+				System.out.println("Login Successfull");
+				
+	}
+
+}

@@ -1,0 +1,22 @@
+package Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class HomePage {
+	
+	WebDriver driver;
+	
+	public void doLogin(String username, String password){
+	driver.findElement(By.xpath("//*[@id='email']")).sendKeys("username");
+	driver.findElement(By.xpath("//*[@id='pass']")).sendKeys("password");
+	driver.findElement(By.xpath("//*[@id='u_0_l']")).click();
+	}
+	
+	public void doSignUp(){
+		
+	}
+	public void validateitems(){
+		
+	}
+}

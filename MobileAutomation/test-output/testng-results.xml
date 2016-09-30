@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="4065" started-at="2016-09-19T17:07:55Z" finished-at="2016-09-19T17:08:00Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="4065" started-at="2016-09-19T17:07:55Z" finished-at="2016-09-19T17:08:00Z">
+      <class name="testcases.TestWebApp">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.TestWebApp@1fb700ee]" name="setup" is-config="true" duration-ms="26398" started-at="2016-09-19T22:37:29Z" finished-at="2016-09-19T22:37:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String)[pri:0, instance:testcases.TestWebApp@1fb700ee]" name="Login" duration-ms="4023" started-at="2016-09-19T22:37:55Z" data-provider="getData" finished-at="2016-09-19T22:38:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[a151logr@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[logrtest]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testcases.TestWebApp@1fb700ee]" name="teardown" is-config="true" duration-ms="2388" started-at="2016-09-19T22:38:00Z" finished-at="2016-09-19T22:38:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testcases.TestWebApp -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

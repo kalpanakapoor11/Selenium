@@ -1,0 +1,23 @@
+package com.w2a.appium.rough;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import com.w2a.appium.utils.CommonUtils;
+
+public class TestProperties {
+	
+	public static Properties prop=new Properties();
+	
+	public static void main(String[] args) throws IOException {
+		
+		FileInputStream fis = new FileInputStream("D:\\DMI Project & documents\\WildBird\\Automation\\GMbkQV1kSoyRSDCVVPUg_AppiumPOMwithMaven\\AppiumPOMwithMaven\\src\\test\\resources\\properties\\googlewebapp.properties")
+		prop.load(fis);
+		System.out.println(System.getProperty("user.dir"));
+		
+		CommonUtils.loadConfigProp("googlewebapp.properties");
+		
+	}
+
+}

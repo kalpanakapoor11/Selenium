@@ -1,0 +1,28 @@
+package rough;
+
+import org.testng.annotations.Test;
+import org.testng.annotations.DataProvider;
+
+public class parameterization {
+	@Test(dataProvider="getData")
+	public void testdata(String username,String password){
+		
+		System.out.println(username+"_______" +password);
+		
+		
+	}
+	
+	@DataProvider
+	
+	public static Object[][] getData(){
+		Object[][] data=new Object[2][2];
+		
+		data[0][0]="kukku";
+		data[0][1]="dfksdfj";
+		data[1][0]="yogu";
+		data[1][1]="dfsf";
+		return data;
+		
+	}
+
+}

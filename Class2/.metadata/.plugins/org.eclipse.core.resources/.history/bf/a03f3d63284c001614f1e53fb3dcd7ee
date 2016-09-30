@@ -1,0 +1,49 @@
+package rough;
+
+import org.testng.annotations.Test;
+
+import utility.ExcelReader;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+
+public class parameterization {
+	
+	public static ExcelReader excel=null;
+	public static Webdriver = driver;
+	
+	
+	@BeforeTest
+	public void setUp(){
+		FirefoxDriver driver = new FirefoxDriver();
+		
+	}
+	
+	@Test(dataProvider="getData")
+	public void testdata(String username,String password){
+		
+		driver.get("https://gmail.com");
+	}	
+	@DataProvider
+	
+	public static Object[][] getData(){
+		
+		
+		if(excel==null){
+			excel= new ExcelReader("C:\\Users\\User1\\workspace\\Class2\\VirginBO\\src\\Test Data\\Credentials.xlsx");
+				
+			}
+		
+		String sheetName="Credentials";
+		int row=excel.getRowCount(sheetName);
+		int cols=excel.getColumnCount(sheetName);
+		Object[][] data=new Object[row-1][cols];
+		System.out.println("Total rows are:"+row);
+		System.out.println("Total cols are:"+cols);
+	
+		return data;
+		
+	}
+	}
+

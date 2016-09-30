@@ -1,0 +1,22 @@
+package base;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+
+public class TestBase {
+	public static WebDriver driver;
+	public static Properties OR= new Properties();
+	public static Properties config=new Properties();
+	public static FileInputStream fis;
+	public static ExcelReader excel=new ExcelReader();
+	
+	public void setup(){
+		
+	}
+	public void teardown(){
+		
+	}
+
+}

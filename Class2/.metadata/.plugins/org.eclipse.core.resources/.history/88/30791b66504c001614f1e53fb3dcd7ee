@@ -1,0 +1,12 @@
+#Test URL
+url=https://virgin-red-dev.appspot.com/backoffice/#/
+
+browser=firefox
+
+#This data will be used for login into the application
+env=qa
+#To enter email address
+EmailAddress=adminred12@backoffice.com
+
+#To enter password
+Password=testing

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Data Driven Framework]">
+  <test name="Login Page test(failed)">
+    <classes>
+      <class name="testcases.LoginTestCase">
+        <methods>
+          <include name="setup"/>
+          <include name="Login" invocation-numbers="1"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- testcases.LoginTestCase -->
+    </classes>
+  </test> <!-- Login Page test(failed) -->
+</suite> <!-- Failed suite [Data Driven Framework] -->

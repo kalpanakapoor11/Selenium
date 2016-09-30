@@ -1,0 +1,49 @@
+package testcases;
+
+
+import org.testng.annotations.Test;
+
+import base.TestBase;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.DataProvider;
+
+public class LoginTestCase extends TestBase {
+	@Test(dataProvider="getData")
+	public void Login(String username,String password){
+		
+		log.debug(driver.getTitle());
+		
+		log.debug("Inside login test");
+		driver.findElement(By.name(OR.getProperty("uname"))).sendKeys(username);
+				
+		driver.findElement(By.name(OR.getProperty("pword"))).sendKeys(password);
+		
+		
+		driver.findElement(By.xpath(OR.getProperty("login"))).click();
+		log.debug("login successfully");
+	}
+	
+	
+@DataProvider
+	
+	public static Object[][] getData(){
+		
+		String sheetName="Credentials";
+		int row=excel.getRowCount(sheetName);
+		int cols=excel.getColumnCount(sheetName);
+		Object[][] data=new Object[row-1][cols];
+		
+		for(int rownum=2;rownum<=row;rownum++){
+			for(int colnum=0;colnum<cols;colnum++){
+				data[rownum-2][colnum]=excel.getCellData(sheetName, colnum, rownum);
+			}
+		}
+		//System.out.println("Total rows are:"+row);
+		//System.out.println("Total cols are:"+cols);
+			
+		return data;
+		
+	}
+
+}

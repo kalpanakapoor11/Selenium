@@ -1,0 +1,5 @@
+#Login Test
+
+username=name=user_name
+password=name=pass_word
+login=html/body/div[1]/div/div[2]/div/form/button

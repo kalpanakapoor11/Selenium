@@ -1,0 +1,22 @@
+package rough;
+
+import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class TestLog {
+	
+	public static Logger log=Logger.getLogger("devpinoylogger");
+	public static void main(String[]args){
+		
+		log.debug("starting with webdriver");		
+		WebDriver driver= new FirefoxDriver();
+		log.debug("Initiated google");
+		driver.get("https://gmail.com");
+		
+		driver.findElement(By.xpath("//*[@='Email'])).sendKeys("anything");
+		
+
+	}
+}

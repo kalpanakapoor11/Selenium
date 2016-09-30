@@ -1,0 +1,5 @@
+#Login Test
+
+uname=email
+pword=pass
+login=//*[@id="u_0_m"]

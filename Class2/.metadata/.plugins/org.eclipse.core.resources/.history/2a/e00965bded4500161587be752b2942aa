@@ -1,0 +1,16 @@
+package com.virgin.common;
+
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+
+public class Login {
+	
+	@Test
+	
+	public void login{
+		SystemsetProperty
+		WebDriver driver= new chromedriver;
+		
+	}
+
+}

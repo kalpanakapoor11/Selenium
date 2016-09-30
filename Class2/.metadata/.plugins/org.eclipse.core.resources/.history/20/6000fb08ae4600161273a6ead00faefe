@@ -1,0 +1,38 @@
+package com.virgin.bo.common;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Login {
+	
+	@Test
+	public void login() throws IOException{
+		//System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+				Properties prop=new Properties();
+				FileInputStream fis=new FileInputStream("C:\\Users\\User1\\workspace\\Class2\\VirginBO\\src\\UI Maps\\Login.properties");
+				prop.load(fis);
+				WebDriver driver=new FirefoxDriver();
+				driver.navigate().to(prop.getProperty("url"));
+				System.out.println(driver.getCurrentUrl()); 
+				System.out.println(driver.getTitle());
+				//WebDriverWait wait = new WebDriverWait(driver, 4000);
+				WebElement Uname = driver.findElement(By.name("Username"));
+				Uname.sendKeys(prop.getProperty("EmailAddress"));
+				//WebElement Psw = wait.until(ExpectedConditions.visibilityOfElementLocated((By.name("Password"))));
+				//Psw.sendKeys(prop.getProperty("Password"));
+				//driver.findElement(By.partialLinkText("Forgot Password?")).click();
+				//WebElement Login = wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("html/body/div[1]/div/div[2]/div/form/button"))));
+				//while 
+				//Login.click();
+				//System.out.println("Login Successfull");
+
+}
+
+}

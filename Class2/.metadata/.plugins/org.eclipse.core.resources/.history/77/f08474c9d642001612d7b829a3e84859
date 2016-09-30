@@ -1,0 +1,56 @@
+package Assignment;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver.Window;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class class3 {
+	
+	public static void main(String[]args) throws InterruptedException
+	{
+		System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+		ChromeDriver driver=new ChromeDriver();
+		//FirefoxDriver driver=new FirefoxDriver();
+		//driver.get("http://way2automation.com/way2auto_jquery/index.php");
+		driver.navigate().to("http://way2automation.com/way2auto_jquery/index.php");
+		driver.manage().window().maximize();
+		WebElement uemail=driver.findElement(By.name("email"));
+		uemail.sendKeys("abc@abc.com");
+		System.out.println("found element");
+		WebElement uname=driver.findElement(By.name("name"));
+		uname.sendKeys("abc");
+		System.out.println("name entered");
+		WebElement uphone=driver.findElement(By.name("phone"));
+		uphone.sendKeys("1234567890");
+		System.out.println("phone number entered");
+		Select dropdown = new Select(driver.findElement(By.name("country")));
+		dropdown.selectByValue("Guam");
+		WebElement ucity=driver.findElement(By.name("city"));
+		ucity.sendKeys("city");
+		System.out.println("city entered");
+		//Thread.sleep(1000);
+		driver.manage().timeouts().implicitlyWait(10L,TimeUnit.SECONDS );
+		//WebDriverWait wait = new WebDriverWait(driver, 4000);
+		WebElement usname=driver.findElement(By.name("username"));
+		usname.sendKeys("abc");
+		System.out.println("username entered");
+		/*WebElement upsw=wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("psw")));
+		upsw.sendKeys("psw");
+		System.out.println("psw entered");
+		WebElement usubmit=driver.findElement(By.xpath(".//input[@class='button']"));
+		usubmit.click();
+		System.out.println("registered");
+		*/
+		
+		
+	}
+	
+
+}

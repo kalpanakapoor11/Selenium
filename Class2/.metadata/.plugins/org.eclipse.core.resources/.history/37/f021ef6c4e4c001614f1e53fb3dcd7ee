@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Data Driven Framework">
+	<test name="Regression suite 1">
+		<packages>
+			<package name="base" />
+		</packages>
+	</test>
+</suite>

@@ -1,0 +1,14 @@
+package Assignment;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class loginOnAlert {
+
+	public static void main(String[] args) {
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://getproactiv-ca.stg01.com");
+		
+	}
+
+}

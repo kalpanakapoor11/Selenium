@@ -1,0 +1,15 @@
+package rough;
+
+import org.apache.log4j.Logger;
+
+public class TestLog {
+	
+	public static Logger log=Logger.getLogger("devpinoylogger");
+	public static void main(String[]args){
+		
+		
+	}
+	
+	
+
+}

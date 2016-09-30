@@ -1,0 +1,15 @@
+package Pages;
+
+public class HomePage {
+	
+	public void doLogin(String username, String password){
+		
+	}
+	
+	public void doSignUp(){
+		
+	}
+	public void validateitems(){
+		
+	}
+}

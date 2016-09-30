@@ -1,0 +1,36 @@
+package Pages;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+import org.testng.annotations.DataProvider;
+
+import base.TestBase;
+import utility.testutil;
+
+public class HomePage extends TestBase{
+	
+		@Test(dataProvider="getData",groups="sanity")
+		
+		public void Login(String username,String password){
+			
+			log.debug(driver.getTitle());
+			
+			log.debug("Inside login test");
+			driver.findElement(By.name(OR.getProperty("uname"))).sendKeys(username);
+					
+			driver.findElement(By.name(OR.getProperty("pword"))).sendKeys(password);
+			
+			
+			driver.findElement(By.xpath(OR.getProperty("login"))).click();
+			log.debug("login successfully");
+		}
+		
+		
+	@DataProvider
+		
+		public static Object[][] getData(){
+			
+		return testutil.getData("Credentials");		
+		}
+		
+}

@@ -1,0 +1,40 @@
+package webdrivertesting;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+
+public class TestSample {
+	
+	public static String browser="IE";
+	{
+		System.out.println("jlj");
+	}
+	public static void main(String[]args)
+	{
+		if(browser.equals("Chrome"))
+		{
+			System.setProperty("webdriver.Chrome.driver","chromedriver.exe");
+			ChromeDriver driver=new ChromeDriver();
+			driver.get("https://gmail.com");
+			System.out.println(driver.getTitle());
+	
+		}else if(browser.equals("firefox"))
+		{
+			FirefoxDriver driver=new FirefoxDriver();
+			driver.get("https://gmail.com");
+			System.out.println(driver.getTitle());
+	
+		}else
+		{
+			System.setProperty("webdriver.ie.driver", "IEDriverServer.exe");
+			InternetExplorerDriver driver = new InternetExplorerDriver();
+			driver.get("https://gmail.com");
+			System.out.println(driver.getTitle());
+	
+		}
+		driver.quit();
+		
+			}
+
+}

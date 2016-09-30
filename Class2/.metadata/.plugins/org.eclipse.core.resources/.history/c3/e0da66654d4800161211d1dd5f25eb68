@@ -1,0 +1,18 @@
+package rough;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+public class testproperties {
+
+	public static void main(String[] args) throws IOException {
+		
+		
+		Properties OR=new Properties();
+		
+		FileInputStream fis=new FileInputStream("C:\\Users\\User1\\workspace\\Class2\\DataDrivenFramework\\src\\test\\java\\properties\\OR.properties");
+		OR.load(fis);
+	}
+
+}

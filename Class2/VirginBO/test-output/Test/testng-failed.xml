@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Test]">
+  <test name="Regression suite 1(failed)">
+    <classes>
+      <class name="com.virgin.bo.common.Login">
+        <methods>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.virgin.bo.common.Login -->
+    </classes>
+  </test> <!-- Regression suite 1(failed) -->
+</suite> <!-- Failed suite [Test] -->
